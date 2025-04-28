@@ -15,21 +15,4 @@ public class CreateService {
         }
     }
 
-//     try {
-//         Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:3000/jdbcbd",
-//                 "neondb_owner","npg_3WvB7VbCRGZx&ssl");
-//         System.out.println("conexão com sucesso!");
-//         criarRegistro(connection, "PLM4");
-//         lerRegistros(connection);
-//         atualizarRegistro(connection, 0, "Pedro");
-//         deletarRegistro(connection, 1);
-//         connection.close();
-
-//     } catch (SQLException e) {
-//         System.out.println("Erro ao conectar ao Banco de Dados: " + e.getMessage());
-//     }
-
-// }
-
-
 }
