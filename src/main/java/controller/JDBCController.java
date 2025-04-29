@@ -18,9 +18,9 @@ public class JDBCController {
     private final Scanner scanner;
 
     public JDBCController(CreateService createService,
-                          ReadService readService,
-                          DeleteService deleteService,
-                          UpdateService updateService) {
+            ReadService readService,
+            DeleteService deleteService,
+            UpdateService updateService) {
         this.createService = createService;
         this.readService = readService;
         this.deleteService = deleteService;
@@ -37,12 +37,23 @@ public class JDBCController {
                 scanner.nextLine(); // Limpar buffer
 
                 switch (opcao) {
-                    case 1 -> criarRegistro(connection);
-                    case 2 -> atualizarRegistro(connection);
-                    case 3 -> listarRegistros(connection);
-                    case 4 -> deletarRegistro(connection);
-                    case 0 -> System.out.println("Saindo...");
-                    default -> System.out.println("Opção inválida!");
+                    case 1:
+                        criarRegistro(connection);
+                        break;
+                    case 2:
+                        atualizarRegistro(connection);
+                        break;
+                    case 3:
+                        listarRegistros(connection);
+                        break;
+                    case 4:
+                        deletarRegistro(connection);
+                        break;
+                    case 0:
+                        System.out.println("Saindo...");
+                        break;
+                    default:
+                        System.out.println("Opção inválida!");
                 }
             } while (opcao != 0);
         } catch (Exception e) {
